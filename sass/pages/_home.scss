@@ -1,0 +1,121 @@
+@use "../utils/variables";
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-family: variables.$primary-font;
+  color: variables.$primary-color;
+}
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-image: url(../../images/img_header_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 64px 165px 146px;
+}
+.logo-and-nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+nav {
+  height: 36px;
+  ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+
+    li {
+      height: 100%;
+      font-family: variables.$secondary-font;
+      color: variables.$primary-color;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 166.667%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+    li:hover::after {
+      cursor: pointer;
+      display: block;
+      content: "";
+      width: 24px;
+      height: 2px;
+      margin-top: 8px;
+      background-color: variables.$primary-color;
+    }
+  }
+}
+.header__title-box {
+  margin-top: 153px;
+  width: 650px;
+  padding: 40px;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 97.222%;
+  text-transform: uppercase;
+  border: 2px solid variables.$primary-color;
+}
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 160px 164px 184px;
+
+  &__page-vr {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+
+    &__description {
+      padding: 96px 0 0 96px;
+      background-color: variables.$primary-color;
+      color: variables.$secondary-color;
+
+      &__title {
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 100%px;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-family: variables.$secondary-font;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 166.667%;
+      }
+    }
+  }
+}
