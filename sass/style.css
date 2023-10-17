@@ -195,6 +195,9 @@ nav ul li:hover::after {
   left: 40px;
   bottom: 32px;
 }
+.main__creations__image-section div:hover {
+  cursor: pointer;
+}
 .main__creations__image-section div:hover img {
   opacity: 40%;
 }
