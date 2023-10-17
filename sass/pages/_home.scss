@@ -99,6 +99,7 @@ nav {
     align-items: end;
 
     &__description {
+      height: 200px;
       padding: 96px 0 0 96px;
       background-color: variables.$primary-color;
       color: variables.$secondary-color;
