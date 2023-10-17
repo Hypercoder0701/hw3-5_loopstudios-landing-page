@@ -20,6 +20,7 @@ body {
 }
 
 .main-container {
+  max-width: 1440px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -46,6 +47,9 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
+}
+.logo-and-nav img:hover {
+  cursor: pointer;
 }
 
 nav {
@@ -102,29 +106,124 @@ nav ul li:hover::after {
   justify-content: start;
   align-items: center;
   padding: 160px 164px 184px;
+  gap: 184px;
 }
-.main__page-vr {
-  height: 300px;
+.main__pg-vr {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
+  position: relative;
 }
-.main__page-vr__description {
+.main__pg-vr__description {
+  width: 540px;
   padding: 96px 0 0 96px;
   background-color: #fff;
   color: #000;
+  position: absolute;
+  right: 0;
 }
-.main__page-vr__description__title {
+.main__pg-vr__description__title {
   font-size: 48px;
   font-weight: 300;
-  line-height: 100% px;
+  line-height: 100%;
   text-transform: uppercase;
+  margin-bottom: 24px;
 }
-.main__page-vr__description p {
+.main__pg-vr__description p {
   font-family: "Alata", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 166.667%;
+}
+.main__creations {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+.main__creations__title-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+.main__creations__title-section span {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.main__creations__title-section button {
+  padding: 13px 43px 13px 38px;
+  font-family: "Alata", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+.main__creations__title-section button:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.main__creations__image-section {
+  width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, auto);
+}
+.main__creations__image-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+.main__creations__image-section div span {
+  position: absolute;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 100%;
+  text-transform: uppercase;
+  left: 40px;
+  bottom: 32px;
+}
+.main__creations__image-section div:hover img {
+  opacity: 40%;
+}
+.main__creations__image-section div:hover span {
+  color: #000;
+}
+
+footer {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 44px 165px 33px;
+  gap: 24px;
+}
+footer div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div img:hover {
+  cursor: pointer;
+}
+footer p {
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 166.667%;
+  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */
