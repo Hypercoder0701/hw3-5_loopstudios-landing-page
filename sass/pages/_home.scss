@@ -21,20 +21,21 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
   background-image: url(../../images/img_header_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 64px 165px 146px;
 }
+
 .logo-and-nav {
   width: 100%;
   height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
 
   img:hover {
     cursor: pointer;
@@ -77,6 +78,9 @@ nav {
     }
   }
 }
+.hambur-menu {
+  display: none;
+}
 .header__title-box {
   margin-top: 153px;
   width: 650px;
@@ -103,6 +107,10 @@ nav {
     justify-content: space-between;
     align-items: end;
     position: relative;
+
+    img {
+      width: 100px;
+    }
 
     &__description {
       width: 540px;
@@ -150,21 +158,6 @@ nav {
         line-height: 100%;
         text-transform: uppercase;
       }
-      button {
-        padding: 13px 43px 13px 38px;
-        font-family: variables.$secondary-font;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 100%;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-        background-color: variables.$primary-color;
-      }
-      button:hover {
-        background-color: variables.$secondary-color;
-        color: variables.$primary-color;
-        cursor: pointer;
-      }
     }
     &__image-section {
       width: 100%;
@@ -201,7 +194,25 @@ nav {
         }
       }
     }
+    #button-second {
+      display: none;
+    }
   }
+}
+button {
+  padding: 13px 43px 13px 38px;
+  font-family: variables.$secondary-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background-color: variables.$primary-color;
+}
+button:hover {
+  background-color: variables.$secondary-color;
+  color: variables.$primary-color;
+  cursor: pointer;
 }
 footer {
   width: 100%;
@@ -228,5 +239,111 @@ footer {
     font-weight: 400;
     line-height: 166.667%;
     opacity: 0.5;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 40px 24px 220px;
+
+    .header__title-box {
+      width: fit-content;
+      text-wrap: wrap;
+      margin-top: 164px;
+      padding: 24px;
+      font-size: 40px;
+      line-height: 95%;
+    }
+
+    nav {
+      display: none;
+    }
+  }
+  .hambur-menu {
+    display: block;
+  }
+
+  .main {
+    padding: 96px 24px;
+
+    &__pg-vr {
+      position: static;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+
+      img {
+        width: 90vw;
+      }
+      &__description {
+        width: 90vw;
+        text-align: center;
+        position: static;
+        padding: 0;
+        margin-top: 48px;
+
+        span{
+        font-size: 144rem;
+        }
+        p {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &__creations {
+      &__title-section {
+        justify-content: center;
+        span {
+          text-align: center;
+        }
+        p {
+          width: auto;
+          text-wrap: wrap;
+        }
+      }
+      &__image-section {
+        grid-template-columns: auto;
+        justify-items: center;
+        align-items: center;
+
+        div {
+          span {
+            left: 20px;
+            bottom: 20px;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  #button-first {
+    display: none;
+  }
+  #button-second {
+    display: block;
+  }
+
+  footer {
+    width: auto;
+    padding: 0px;
+    margin: 0;
+
+    .logo-and-socials {
+      justify-content: center;
+
+      #socials {
+        display: none;
+      }
+    }
+    div {
+      flex-direction: column;
+      nav {
+        ul {
+          flex-direction: column;
+        }
+      }
+    }
   }
 }

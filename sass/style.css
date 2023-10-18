@@ -32,7 +32,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
   background-image: url(../../images/img_header_bg.png);
   background-size: cover;
@@ -46,7 +46,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
 }
 .logo-and-nav img:hover {
   cursor: pointer;
@@ -88,6 +88,10 @@ nav ul li:hover::after {
   background-color: #fff;
 }
 
+.hambur-menu {
+  display: none;
+}
+
 .header__title-box {
   margin-top: 153px;
   width: 650px;
@@ -115,6 +119,9 @@ nav ul li:hover::after {
   justify-content: space-between;
   align-items: end;
   position: relative;
+}
+.main__pg-vr img {
+  width: 100px;
 }
 .main__pg-vr__description {
   width: 540px;
@@ -158,21 +165,6 @@ nav ul li:hover::after {
   line-height: 100%;
   text-transform: uppercase;
 }
-.main__creations__title-section button {
-  padding: 13px 43px 13px 38px;
-  font-family: "Alata", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  background-color: #fff;
-}
-.main__creations__title-section button:hover {
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-}
 .main__creations__image-section {
   width: 100%;
   display: grid;
@@ -204,6 +196,26 @@ nav ul li:hover::after {
 .main__creations__image-section div:hover span {
   color: #000;
 }
+.main__creations #button-second {
+  display: none;
+}
+
+button {
+  padding: 13px 43px 13px 38px;
+  font-family: "Alata", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
 
 footer {
   width: 100%;
@@ -229,4 +241,93 @@ footer p {
   font-weight: 400;
   line-height: 166.667%;
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 40px 24px 220px;
+  }
+  header .header__title-box {
+    width: -moz-fit-content;
+    width: fit-content;
+    text-wrap: wrap;
+    margin-top: 164px;
+    padding: 24px;
+    font-size: 40px;
+    line-height: 95%;
+  }
+  header nav {
+    display: none;
+  }
+  .hambur-menu {
+    display: block;
+  }
+  .main {
+    padding: 96px 24px;
+  }
+  .main__pg-vr {
+    position: static;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  .main__pg-vr img {
+    width: 90vw;
+  }
+  .main__pg-vr__description {
+    width: 90vw;
+    text-align: center;
+    position: static;
+    padding: 0;
+    margin-top: 48px;
+  }
+  .main__pg-vr__description span {
+    font-size: 144rem;
+  }
+  .main__pg-vr__description p {
+    opacity: 0.5;
+  }
+  .main__creations__title-section {
+    justify-content: center;
+  }
+  .main__creations__title-section span {
+    text-align: center;
+  }
+  .main__creations__title-section p {
+    width: auto;
+    text-wrap: wrap;
+  }
+  .main__creations__image-section {
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+  }
+  .main__creations__image-section div span {
+    left: 20px;
+    bottom: 20px;
+    font-size: 24px;
+  }
+  #button-first {
+    display: none;
+  }
+  #button-second {
+    display: block;
+  }
+  footer {
+    width: auto;
+    padding: 0px;
+    margin: 0;
+  }
+  footer .logo-and-socials {
+    justify-content: center;
+  }
+  footer .logo-and-socials #socials {
+    display: none;
+  }
+  footer div {
+    flex-direction: column;
+  }
+  footer div nav ul {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
